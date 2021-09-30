@@ -1,0 +1,103 @@
+.benefits {
+    padding: 100px 0;
+    background-color: $light-color;
+
+    &__title {
+        font-size: toRem(24);
+        font-weight: 500;
+        font-family: 'Fira Sans', sans-serif;
+        margin-bottom: 48px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 27px;
+        max-width: 283px;
+        width: 100%;
+
+        @include a (laptop) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        white-space: nowrap;
+        width: max-content;
+        padding-right: 26px;
+        &::after {
+            content: "";
+            position: absolute;
+            background: url(./../img/benefits-icon.png);
+            width: 16px;
+            height: 16px;
+            right: 0;
+        }
+
+        &-2 {
+            margin-right: 40px;
+        }
+
+        &-3 {
+            margin-right: 80px;
+        }
+
+        &-4 {
+            margin-right: 120px;
+        }
+    }
+
+
+    &__image {
+        @include a (laptop) {
+            display: none;
+        }
+    }
+
+
+    &__descr {
+        margin-bottom: 30px;
+        text-align: right;
+        max-width: 267px;
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        padding: 6px 34px;
+
+        @include a (laptop) {
+            margin: 0 auto;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(./../img/benefits.svg);
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+        }
+    }
+}

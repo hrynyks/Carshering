@@ -1,0 +1,48 @@
+.footer {
+    padding: 75px 0 24px;
+    background-color: #332208;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__btn {
+        padding: 15px 18px;
+    }
+
+    &__items {
+        display: flex;
+        gap: 30px;
+
+        @include a (mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__link {
+        font-size: toRem(18);
+        color: $light-color;
+
+    }
+
+    &__phone {
+        color: $light-color;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+}

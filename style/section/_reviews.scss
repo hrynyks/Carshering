@@ -1,0 +1,52 @@
+.reviews {
+    padding: 100px 0 150px;
+    background-color: #332208;
+
+    &__title {
+        font-size: toRem(24);
+        font-weight: 500;
+        font-family: 'Fira Sans', sans-serif;
+        color: $light-color;
+        margin-bottom: 70px;
+
+        @include a (laptop) {
+            text-align: center;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        gap: 30px;
+        @include a (laptop) {
+            grid-template-columns: repeat(2, 270px);
+            justify-content: center;
+        }
+
+        @include a (tablet) {
+            grid-template-columns: 270px;
+        }
+    }
+
+    &__item {
+        max-width: 270px;
+        width: 100%;
+        border: 1px solid $accent-color;
+        padding: 45px 30px;
+
+        &-title {
+            font-size: toRem(24);
+            font-weight: 500;
+            font-family: 'Fira Sans', sans-serif;
+            color: $light-color;
+            text-align: center;
+            margin-bottom: 47px;
+        }
+
+        &-descr {
+            line-height: 19px;
+            color: $light-color;
+            text-align: center;
+        }
+    }
+}
